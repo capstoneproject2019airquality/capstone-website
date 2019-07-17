@@ -2184,7 +2184,7 @@ input[type="radio"]+label:before {
 }
 
 .image img {
-    border-radius: 1px;
+    border-radius: 15px;
     display: block;
 }
 
