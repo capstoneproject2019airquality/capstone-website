@@ -161,8 +161,8 @@ textarea {
 }
 
 #header h1 a {
-    font-size: 1.25em;
-    font-weight: 600;
+    font-size: 1.4em;
+    font-weight: 700;
 }
 
 
@@ -357,11 +357,7 @@ p {
 }
 
 h1 {
-    color: rgba(226, 218, 218, 0.849);
-    font-family: Raleway, Helvetica, sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin: 0 0 1em 0;
+    color: #c7c6c6;
 }
 
 h2,
@@ -2794,18 +2790,18 @@ button:disabled,
     margin-left: -1.75em;
     margin-top: -1.75em;
     position: relative;
-    width: calc(50% + 3.5em);
+    width: calc(100% + 3.5em);
 }
 
 .features article .image img {
     border-radius: 5px 5px 0 0;
-    width: 70%;
+    width: 100%;
 }
 
 @media screen and (max-width: 980px) {
     .features article {
         margin: 1em 2em 1em 0;
-        width: calc(70% - 1em);
+        width: calc(50% - 1em);
     }
 }
 
@@ -3744,10 +3740,6 @@ body.is-preload #banner p {
     .wrapper .inner {
         padding: 2em 1.5em 0.1em 1.5em;
     }
-}
-
-#four .inner #figure {
-    margin: 30px
 }
 
 

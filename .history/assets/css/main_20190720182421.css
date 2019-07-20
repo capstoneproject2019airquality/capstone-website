@@ -407,6 +407,10 @@ h6.major {
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 }
 
+h3.marjor {
+    align: "cemter"
+}
+
 h2 {
     font-size: 1.2em;
 }
@@ -3744,10 +3748,6 @@ body.is-preload #banner p {
     .wrapper .inner {
         padding: 2em 1.5em 0.1em 1.5em;
     }
-}
-
-#four .inner #figure {
-    margin: 30px
 }
 
 

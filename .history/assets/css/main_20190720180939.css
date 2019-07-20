@@ -2799,13 +2799,13 @@ button:disabled,
 
 .features article .image img {
     border-radius: 5px 5px 0 0;
-    width: 70%;
+    width: 50%;
 }
 
 @media screen and (max-width: 980px) {
     .features article {
         margin: 1em 2em 1em 0;
-        width: calc(70% - 1em);
+        width: calc(50% - 1em);
     }
 }
 
@@ -3744,10 +3744,6 @@ body.is-preload #banner p {
     .wrapper .inner {
         padding: 2em 1.5em 0.1em 1.5em;
     }
-}
-
-#four .inner #figure {
-    margin: 30px
 }
 
 
