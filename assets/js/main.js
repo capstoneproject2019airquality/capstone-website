@@ -143,3 +143,20 @@
 			});
 
 })(jQuery);
+
+
+function expandTimeline() {
+	var dots = document.getElementById("dots");
+  var moreText = document.getElementById("timeline");
+  var btnText = document.getElementById("tl-link");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "See Project Timeline";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hide Project TimeLine";
+    moreText.style.display = "inline";
+  }
+}

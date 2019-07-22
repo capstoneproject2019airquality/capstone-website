@@ -3825,6 +3825,8 @@ body.is-preload #banner p {
     color: inherit;
 }
 
+
+
 @media screen and (max-width: 1280px) {
     #footer {
         background-color: #2e3141;
@@ -3891,4 +3893,8 @@ body.is-preload #banner p {
     #footer .inner {
         padding: 2em 1.5em 0.1em 1.5em;
     }
+}
+
+#timeline {
+  display: none;
 }
