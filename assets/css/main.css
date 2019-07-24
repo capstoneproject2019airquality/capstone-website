@@ -3825,6 +3825,8 @@ body.is-preload #banner p {
     color: inherit;
 }
 
+
+
 @media screen and (max-width: 1280px) {
     #footer {
         background-color: #2e3141;
@@ -3891,4 +3893,27 @@ body.is-preload #banner p {
     #footer .inner {
         padding: 2em 1.5em 0.1em 1.5em;
     }
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 5%; /* Place the button at the bottom of the page */
+  right: 2%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  background-color: #666d94; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 1%; /* Some padding */
+  border-radius: 30%;
+  font-size: 20px;
+  font: inherit;
+}
+
+#myBtn:hover {
+  background-color: #2e3141; /* Add a dark-grey background on hover */
+}
+
+#timeline {
+  display: none;
 }
