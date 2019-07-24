@@ -3143,9 +3143,8 @@ body.is-menu-visible #menu .inner {
 }
 
 #banner .inner .note {
-    font-size: 150;
+    font-size: 200;
     font-weight: 400;
-    text-transform: lowercase;
 }
 
 #banner .logo {
