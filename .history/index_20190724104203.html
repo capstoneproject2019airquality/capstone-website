@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<!--
+Local Air Quality Management: Disrupting Vehicle Emission Testing Programs (NYU Marron Institute)
+-->
+<html>
+
+<head>
+    <title>NYU CUSP Capstone Project 2019 </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                <a href="#intro">Introduction</a>&emsp;&emsp;
+                <a href="#data">Raw Data</a>&emsp;&emsp;
+                <a href="#method">Methodology</a>&emsp;&emsp;
+                <a href="#result">Result</a>&emsp;&emsp;
+                <a href="#conclusion">Conclusion</a>&emsp;&emsp;
+                <a href="#people">About&nbsp;Us</a></h1>
+        </header>
+
+        <!-- Button -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="logo"><img src="images/logo-01.png" width='45%' height="10%"></span>
+                </div>
+                <h2>Local Air Quality Management: Disrupting Vehicle Emission Testing Programs</h2>
+                <p> Sponsored by NYU Marron Institute; Conducted by NYU CUSP students</p>
+                <a href="https://jz3309capstone.herokuapp.com/" class="special">Web Application</a>
+                <a href="https://github.com/capstoneproject2019airquality" class="special">Code</a>
+                <a href="https://github.com/capstoneproject2019airquality/capstone_code_sharing/blob/master/Final%20Paper/air_quality_final.pdf" class="special">Paper</a>
+            </div>
+        </section>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <!-- One -->
+            <section id="abstract" class="wrapper spotlight style1">
+                <div name="overview" class="inner">
+                    <div class="logo1"><span class="fa fa-anchor"></span></div>
+                    <div class="content">
+
+                        <h2 class="major">Project Overview</h2>
+                        <p align="left">
+                            Salt Lake County oversees a vehicle emissions testing program to ensure compliance with federal air quality standards. Motorists annually spend millions of dollars for inspections carried out under this program.
+                            <br/></br>However, it is not subject to cost controls and suffers from programmatic inefficiencies wherein a large number of compliant vehicles undergo testing and a small number of high-polluting vehicles forgo timely repair.
+                            Using survey-based emissions test pricing data, we assess through empirical and spatial autocorrelation analysis the potential economic impact of instituting both emissions test price caps and subsidies to fund compliance repairs.
+                            </br><br/> How can we leverage Salt Lake County test pricing and test results data to reduce cost inefficiencies for motorists and improve overall efficiency of the I/M program for local government?
+
+                            </br><br/>
+                            <span id="dots"> </span>
+                            <span id='timeline'>
+                            <a><img src="images/projectA_timeline.png" width="100%" height="80%" /></a>
+                            </br>
+                            <a><img src="images/projectB_timeline.png" width="100%" height="80%" /></a>
+                          </span>
+                        </p>
+                        <a onclick='expandTimeline()' class="special" id='tl-link'>See Project Timeline</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Two -->
+            <section id="intro" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <!--<a href="#" class="image"><img src="images/pic011.jpg" alt="" /></a>-->
+                    <div class="logo1"><span class="fa fa-map-signs"></span></div>
+                    <!-- change the image here -->
+                    <div class="content">
+                        <h2 class="major">Introduction</h2>
+                        <p align="left">The Salt Lake County vehicle emissions testing program suffers from uncontrolled transactional cost burdens for motorists and is not capable of tracking noncompliant vehicles. How can we leverage Salt Lake County test pricing and
+                            vehicle data to reduce cost inefficiencies for motorists and enable tracking capabilities for local government? This project proposes to support Salt Lake County regulators in the exploration and development of new cost efficiencies
+                            and noncompliant vehicle tracking capabilities.
+                            <br/></br>We seek to accomplish the following: the identification of testing price points that can accomplish a decrease in cost per ton of reduced pollutant emissions while preserving service availability within the testing
+                            provider network, and discernment of patterns in noncompliant vehicle use through ensemble classification methods.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Three -->
+            <section id="data" class="wrapper spotlight style1">
+                <div class="inner">
+                    <div class="logo1"><span class="fa fa-database"></span></div>
+
+                    <div class="content">
+                        <h2 class="major"> Raw Data </h2>
+                        <p align="left"> <strong>1.&nbsp&nbspCounty-wide Testing Facility Price Data, January and February 2019</strong></br>
+                            This dataset contains 435 rows of detail for each test station within Salt Lake County: a unique station ID, test fees, the station name, and street address along with city name and zip codes. The data do not contain point geographies, detail on any additional
+                            taxes and fees, and station type categorization info. </br>
+                            <br/><strong>2.&nbsp&nbsp Emissions Test Record, 2017-2018, Salt Lake County</strong></br>
+                            The dataset contains independent variables detailing vehicle and testing characteristics and one categorical dependent variable with three values: test pass, test fail, and test rejected due to insufficient data from the vehicle’s onboard computer.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Four -->
+            <section id="method" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <div class="logo1"><span class="fa fa-sitemap"></span></div>
+                    <div class="content">
+
+                        <h2 class="major"> Methodology </h2>
+                        <p align="left">
+                            1. Stratified sampling of the testing provider population <br/> 2. Primary data collection with phone surveys and spatial analyses <br/> 3. Local Moran's I map for all test & OBDII test, measuring overall spatial autocorrelation
+                            of the dataset <br/> 4. Kernel density for station locations, all test counts for each location, and OBDII test counts for each location <br/> 5. Geographically Weighted Regression with standard residual map for all test count
+                            and OBDII counts <br/> 6. Normal spatial distribution including population distribution and spatial joined choropleth map for all test and OBDII test counts
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Five -->
+            <section id="result" class="wrapper spotlight style4">
+                <div class="inner">
+
+                    <div class="content">
+                        <h2 class="major"> Result </h2>
+                        <p align="left">
+                            <strong>1. &nbsp&nbsp Web Application </strong> </br>
+                            A prototype web application displays locations of testing facilities with detailed information on each of them and filter feature based on zip code and price range.
+                            </br><br/> Application will be used by county residents and our intuition. Domain knowledge of our mentor indicated that filtering specifically by zip code will allow users to quickly select the most convenient facilities,
+                            while price filter will add transparency to existing pricing schemes and provide a more informed and economically transparent facility selection process.
+                            </br>
+                            <div align="center">
+                                <a href="https://jz3309capstone.herokuapp.com/"> <img src="images/app.jpg" width="90%" height="30%" /></a>
+                            </div>
+                            </br>
+                        </p>
+                        <p align="left">
+                            <strong>2.  &nbsp&nbsp Local Moran's I</strong> </br>
+                            The main outcomes from our analysis include Managers suggested average of 35$ (similar to current county average) as proposed price cap. Around 63% of managers claimed not to offer testing after a price cap is introduced. 60% of managers would be willing
+                            to participate in government subsidy programs that would foster timely repairs.</br>
+                            <div id="figure" align="center">
+                                <a><img src="images/LISA.jpg" width="60%" height="50%" /></a>
+                                </br>
+                            </div>
+                        </p>
+                        <p align="left">
+                            <strong align="left">3.  &nbsp&nbsp Stats</strong> </br>
+                            To support stakeholder decision-making, we have calculated multiple statistics on testing in the county based on the data. We estimated number of initial tests per test result in each year (2017-2018). We calculated the average cost of testing and average
+                            price across all tests.
+                            <ul>
+                                <li align="left">Around 7% of initial OBDII tests do not pass, where 4% results are rejects (vehicle not yet ready to take the test due to technical conditions), and 3% are fails (vehicle did not pass the test).</li>
+                                <li align="left">Average price of all OBDII tests is currently 33.95$ (to compare, in Cache County, UT price cap is set at 15$, so the difference is significant).Initial results and all statistics have been reported to the stakeholder.</li>
+                            </ul>
+                        </p>
+                        <!-- <a href="#" class="special">Learn more</a> -->
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Six -->
+            <section id="conclusion" class="wrapper alt spotlight style2">
+                <div class="inner">
+                    <div class="logo1"><span class="fa fa-clipboard-check"></span></div>
+                    <div class="content">
+                        <h2 class="major"> Conclusion</h2>
+                        <p align="left"> Major risks of the project are associated with communication and delivery. In the research plan we indicate that some steps might require iteration - those include analytical framework development and application development. Therefore,
+                            timely delivery will highly depend on successful collaboration with the stakeholder, and among team members, to avoid unnecessary misunderstandings and extensions.
+                            </br><br/> Another risk resides in the team’s capability to deliver high quality products to the end users. Because our stakeholder is a government institution and our work might have sufficient impact on the entire vehicle
+                            emission test program, it is crucial to ensure we meet expectations and produce high-end deliverables.
+                            </br> <br/> To mitigate this risk we often sought advice from more experienced peers, eg. We have contacted professional UX designer to conduct our application tests. We also tried to quickly identify potentially difficult
+                            tasks and issues to address them together and find solutions during team calls or meetings.
+                        </p>
+                        <!-- <a href="#" class="special">Learn more</a> -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seven -->
+            <section id="reference" class="wrapper spotlight style4">
+                <div class="inner">
+                    <div class="content">
+                        <h2 class="major"> References </h2>
+                        <p align='left'> Baltusis, Paul. On board vehicle diagnostics. No. 2004-21-0009. SAE Technical Paper, 2004.</br><br/> Harrington, Winston, Virginia McConnell, and Amy Ando. "Are vehicle emission inspection programs living up to expectations?."
+                            Transportation Research Part D: Transport and Environment 5.3 (2000): 153-172. </br><br/> Kuhns, Hampden D., et al. "Remote sensing of PM, NO, CO and HC emission factors for on-road gasoline and diesel engine vehicles in Las
+                            Vegas, NV." Science of the Total Environment 322.1-3 (2004): 123-137.</br><br/> National Research Council. Evaluating Vehicle Emissions Inspection and Maintenance Programs. National Academies Press, 2001. </br><br/> Pierce,
+                            Lamar, and Jason A. Snyder. "Discretion and manipulation by experts: Evidence from a vehicle emissions policy change." The BE Journal of Economic Analysis & Policy 12.3 (2012). </p>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- People -->
+            <section id="people" class="wrapper alt style1">
+                <div class="inner">
+                    <h2 class="major">Group Members</h2>
+
+                    <section class="features">
+                        <article>
+                            <br/>
+                            <div align="center">
+                                <a href="#" class="image"><img src="images/people-Ewelina.jpg" /></a>
+                            </div>
+                            <h3 align="center">Project Manager</h3>
+                            <h3 class="major" align="center">Ewelina Marcinkiewicz</h3>
+
+                            <p> Ewelina Marcinkiewicz was responsible for setting measurable targets, intellectual progression of the project, and team management. She conducted multiple problem-solving sessions for the team to identify appropriate goals
+                                and methods for various aspects of the project. She handled internal and external communication, managed expectations, and overlooked team’s delivery. Ewelina took responsibility for design and execution of user experience
+                                testing for the web application, survey and analysis with testing facility managers, and delivery of key take-aways.
+
+                            </p>
+                            <a href="https://www.linkedin.com/in/ewelina-marcinkiewicz/" class="special"> Linkedin </a>
+                            <a href="#" class="special"> Github </a>
+                        </article>
+                        <article>
+                            <br/>
+                            <div align="center">
+                                <a href="#" class="image"><img src="images/people-Yunhe.jpg" alt="" /></a>
+                            </div>
+                            <h3 align="center">Data Visualization Lead</h3>
+                            <h3 class="major" align="center">Yunhe Cui</h3>
+
+                            <p>Yunhe Cui was responsible for data visualisation and interpretation. The team will use ArcGIS desktop, HTML5, CSS, Tableau Public, CartoDB, and ArcGIS Pro to represent spatial and non-spatial data in maps and interactive charts.
+                                For project A, she geocoded the test station addresses.
+
+                            </p>
+                            <a href="https://www.linkedin.com/in/yunhe-cui-67503a115/" class="special"> Linkedin </a>
+                            <a href="https://github.com/yunhecui" class="special"> Github </a>
+                        </article>
+                        <article>
+                            <br/>
+                            <div align="center">
+                                <a href="#" class="image"><img src="images/people-Ursula.jpg" alt="" /></a>
+                            </div>
+                            <h3 align="center">Document Lead</h3>
+                            <h3 class="major" align="center">Ursula Kaczmarek</h3>
+
+                            <p>Ursula Kaczmarek assumed responsibility for making the vehicle-level testing data suitable for exploratory analysis and modeling, using the Tidyverse data-cleaning package in R. She also performed exploratory analysis on these
+                                testing data, including identification of an appropriate algorithm for identifying per-vehicle initial test results. She performed a literature review on developments within the country’s vehicle emissions programs and
+                                price caps within regulated monopolies.
+
+                            </p>
+
+                            <a href="#" class="special"> Linkedin </a>
+                            <a href="https://github.com/ursulakaczmarek" class="special"> Github </a>
+                        </article>
+                        <article>
+                            <br/>
+                            <div align="center">
+                                <a href="#" class="image"><img src="images/people-Jiawen.jpg" alt="" /></a>
+                            </div>
+                            <h3 align="center">Web Application Lead</h3>
+                            <h3 class="major" align="center">Jiawen Liang</h3>
+                            <p> Jiawen Liang was responsible for the web application development. He was responsible for designing a web application based on collected data which could help residents in Salt Lake County to locate the cheapest repair shop
+                                around them that can do the emission test. Jiawen created two prototypes of the application based on user experience test results.
+
+                            </p>
+                            <a href="https://www.linkedin.com/in/jiawen-liang-b582b8177/" class="special"> Linkedin </a>
+                            <a href="https://github.com/a627142126" class="special"> Github </a>
+                        </article>
+
+                        <article>
+                            <br/>
+                            <div align="center">
+                                <a href="#" class="image"><img src="images/c.jpg" alt="" /></a>
+                            </div>
+                            <h3 align="center">Data Processing Lead</h3>
+                            <h3 class="major" align="center">Jingxi Zhao</h3>
+
+                            <p>Jingxi Zhao was responsible for primary research data acquiring and processing. She led the team in verification of price-related data for 435 test stations and also supported the second round of survey for facility managers.
+                                She also deployed the web-based application on Heroku and assisted in building the project website using Javascript, HTML and CSS.
+
+                            </p>
+                            <a href="https://www.linkedin.com/in/jingxi-zhao-4aa727156/" class="special"> Linkedin </a>
+                            <a href="https://github.com/jz3309" class="special"> Github </a>
+                        </article>
+                    </section>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major">Get in touch with us!</h2>
+                <ul class="contact">
+                    <li class="icon solid fa-home">
+                        NYU CUSP<br/> 370 Jay Street<br/> Brooklyn, NY, 11201
+                    </li>
+                    <li class="icon solid fa-phone">+1 646-853-7998</li>
+                    <li class="icon solid fa-envelope"><a href="#">em3845@nyu.edu</a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy; NYU CUSP 2019 Capstone</li>
+                    <li>This template is made by <a href="https://colorlib.com">Colorlib</a></li>
+                    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
